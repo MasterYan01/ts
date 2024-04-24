@@ -72,45 +72,45 @@ const boy: RandomIntroduce = {
   fan: 'play'
 }
 //基本寫法(封裝)
-class Animal {
-  name: string
-  constructor(name: string) {
-    this.name = name
-  }
-  eat() { }
-  speak() { }
-}
-//多態
-class Dog extends Animal {
-  speak(): void {
-    console.log(this.name + '旺旺~~')
-  }
-  eat(): void {
-    console.log('吃肉~~')
-  }
-}
-const dog1: Animal = new Dog('tom')
-dog1.eat()
+// class Animal {
+//   name: string
+//   constructor(name: string) {
+//     this.name = name
+//   }
+//   eat() { }
+//   speak() { }
+// }
+// //多態
+// class Dog extends Animal {
+//   speak(): void {
+//     console.log(this.name + '旺旺~~')
+//   }
+//   eat(): void {
+//     console.log('吃肉~~')
+//   }
+// }
+// const dog1: Animal = new Dog('tom')
+// dog1.eat()
 
-class Cook {
-  step1() {
-    console.log('1')
-    return this
-  }
-  step2() {
-    console.log('2')
-    return this
-  }
-  step3() {
-    console.log('3')
-    return this
-  }
-  step4() {
-    console.log('4')
-    return this
-  }
-}
+// class Cook {
+//   step1() {
+//     console.log('1')
+//     return this
+//   }
+//   step2() {
+//     console.log('2')
+//     return this
+//   }
+//   step3() {
+//     console.log('3')
+//     return this
+//   }
+//   step4() {
+//     console.log('4')
+//     return this
+//   }
+// }
 
-const mycook = new Cook
-// mycook.step1().step2().step3().step4()
-console.log(mycook.step1().step2().step3().step4())
+// const mycook = new Cook
+// // mycook.step1().step2().step3().step4()
+// console.log(mycook.step1().step2().step3().step4())
