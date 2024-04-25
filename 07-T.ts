@@ -73,3 +73,15 @@ function getPet(pet: Animal) {
   }
 }
 getPet(new Puppy())
+
+function isCat(pet:Animal):pet is Cat{
+  return (pet as Cat).helloCat !== undefined
+}
+
+function getPet1(pet:Animal){
+  if(isCat(pet)){
+    pet.helloCat()
+  }else{
+    pet.helloPuppy()
+  }
+}

@@ -66,3 +66,14 @@ function getPet(pet) {
     }
 }
 getPet(new Puppy());
+function isCat(pet) {
+    return pet.helloCat !== undefined;
+}
+function getPet1(pet) {
+    if (isCat(pet)) {
+        pet.helloCat();
+    }
+    else {
+        pet.helloPuppy();
+    }
+}
