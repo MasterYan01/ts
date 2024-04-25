@@ -17,5 +17,10 @@ let person1: Person = {
 function getValue(obj: any, keys: string[]) {
   return keys.map(key => obj[key])
 }
-let result = getValue(person1, ['name', 'age'])
+let result = getValue(person1, ['name', ''])
 console.log(result)
+
+function getValue1<T, K extends keyof T>(obj: T, keys: K[]): T[K][] {
+  return keys.map(key => obj[key])
+}
+getValue1(person, ['career'])

@@ -11,5 +11,9 @@ let person1 = {
 function getValue(obj, keys) {
     return keys.map(key => obj[key]);
 }
-let result = getValue(person1, ['name', 'age']);
+let result = getValue(person1, ['name', '']);
 console.log(result);
+function getValue1(obj, keys) {
+    return keys.map(key => obj[key]);
+}
+getValue1(person, ['career']);
