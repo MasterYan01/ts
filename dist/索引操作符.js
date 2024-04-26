@@ -1,19 +1,37 @@
 "use strict";
-let k; //'name'|'age'
-k = 'age';
-//訪問操作符 T[k]
-let k2;
-//實際應用
-let person1 = {
-    name: 'tom',
-    age: 35
+//查詢操作符 keyof T
+// interface Person {
+//   name: string,
+//   age: number
+// }
+// let k: keyof Person //'name'|'age'
+// k = 'age'
+class Ethan {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    speak() {
+        console.log('speak');
+    }
+}
+let PersonInter = {
+    name: 'ethan',
+    age: 35,
+    speak() {
+        console.log('first');
+    }
 };
-function getValue(obj, keys) {
-    return keys.map(key => obj[key]);
+function test(arg) {
+    return arg;
 }
-let result = getValue(person1, ['name', '']);
-console.log(result);
-function getValue1(obj, keys) {
-    return keys.map(key => obj[key]);
+test(10);
+test(10);
+function test1(a, b) {
+    return b;
 }
-getValue1(person, ['career']);
+test1(10, 'hello');
+function test3(arg) {
+    return arg.length;
+}
+console.log(test3({ name: '123', length: 99 }));
